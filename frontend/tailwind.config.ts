@@ -19,8 +19,9 @@ export default {
     },
     extend: {
       fontFamily: {
-        sans: ['Geist', 'sans-serif'],
-        inter: ['Inter', 'sans-serif'],
+        sans: ['Inter', 'sans-serif'],
+        heading: ['Space Grotesk', 'sans-serif'],
+        body: ['Inter', 'sans-serif'],
       },
       colors: {
         border: "hsl(var(--border))",
@@ -96,12 +97,21 @@ export default {
             backgroundPosition: "-200% 0"
           }
         },
+        "meteor-effect": {
+          "0%": { transform: "rotate(45deg) translateX(0)" },
+          "70%": { opacity: 1 },
+          "100%": { 
+            transform: "rotate(45deg) translateX(-500px)",
+            opacity: 0
+          },
+        },
       },
       animation: {
         marquee: 'marquee 40s linear infinite',
         aurora: "aurora 60s linear infinite",
         scroll: "var(--animation-duration, 40s) var(--animation-timing-function, linear) var(--animation-delay, 0s) var(--animation-iteration-count, infinite) var(--animation-direction, normal) var(--animation-fill-mode, forwards) scroll",
         shimmer: "shimmer 2s linear infinite",
+        "meteor-effect": "meteor-effect 5s linear infinite",
       }
     },
   },

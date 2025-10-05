@@ -1,12 +1,12 @@
 import React from "react";
 import { FloatingDock } from "@/components/ui/floating-dock";
 import {
-  IconHome,
-  IconDashboard,
   IconChartBar,
-  IconRobot,
-  IconNews,
-  IconUser,
+  IconActivity,
+  IconBrain,
+  IconShield,
+  IconRoute,
+  IconHelp,
   IconLogin,
 } from "@tabler/icons-react";
 import { Link } from "react-router-dom";
@@ -21,23 +21,44 @@ export default function CryptoFloatingDockDemo() {
       href: "#features",
     },
     {
-      title: "About",
+      title: "Network Pulse",
       icon: (
-        <IconUser className="h-full w-full text-blue-500" />
+        <IconActivity className="h-full w-full text-blue-500" />
       ),
-      href: "#about",
+      href: "#network-pulse",
+    },
+    {
+      title: "AI Engine",
+      icon: (
+        <IconBrain className="h-full w-full text-blue-500" />
+      ),
+      href: "#ai-engine",
+    },
+    {
+      title: "Security",
+      icon: (
+        <IconShield className="h-full w-full text-blue-500" />
+      ),
+      href: "#security",
+    },
+    {
+      title: "Roadmap",
+      icon: (
+        <IconRoute className="h-full w-full text-blue-500" />
+      ),
+      href: "#roadmap",
+    },
+    {
+      title: "FAQ",
+      icon: (
+        <IconHelp className="h-full w-full text-blue-500" />
+      ),
+      href: "#faq",
     },
     {
       title: "Sign In",
       icon: (
         <IconLogin className="h-full w-full text-blue-500" />
-      ),
-      href: "/auth",
-    },
-    {
-      title: "Get Started",
-      icon: (
-        <IconHome className="h-full w-full text-blue-500" />
       ),
       href: "/auth",
     },

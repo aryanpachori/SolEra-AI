@@ -12,6 +12,7 @@ import { HoverBorderGradient } from "@/components/ui/hover-border-gradient";
 import ColourfulText from "@/components/ui/colourful-text";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import { LineChart, Line, XAxis, YAxis, CartesianGrid, ResponsiveContainer } from "recharts";
+import { AnimatedTooltip } from "@/components/ui/animated-tooltip";
 
 const CryptoLanding = () => {
   const scrollToTop = () => {
@@ -45,7 +46,7 @@ const CryptoLanding = () => {
         
         <div className="container mx-auto text-center relative z-10">
           <div className="max-w-4xl mx-auto space-y-8">
-            <div className="text-5xl md:text-7xl font-bold leading-tight text-white">
+            <div className="text-5xl md:text-7xl font-bold leading-tight text-white font-heading">
               <CryptoLayoutTextFlipDemo />
             </div>
             
@@ -70,7 +71,7 @@ const CryptoLanding = () => {
       <section id="features" className="py-20 px-6">
         <div className="container mx-auto">
           <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold mb-4">
+            <h2 className="text-4xl md:text-5xl font-bold mb-4 font-heading">
               Powerful Features for <span className="text-gradient">Smart Trading</span>
             </h2>
             <p className="text-gray-400 text-lg max-w-2xl mx-auto">
@@ -101,7 +102,7 @@ const CryptoLanding = () => {
       <section id="network-pulse" className="py-24 px-6">
         <div className="container mx-auto">
           <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-6xl font-bold text-white mb-4">
+            <h2 className="text-4xl md:text-6xl font-bold text-white mb-4 font-heading">
               See Solana in <ColourfulText text="Motion" />
             </h2>
             <p className="text-gray-400 text-lg text-center mb-12">
@@ -109,10 +110,10 @@ const CryptoLanding = () => {
             </p>
           </div>
 
-          <div className="bg-[#0B0C10] border border-gray-800 rounded-2xl p-8 mb-8">
-            <div className="h-64">
+          <div className="rounded-2xl w-full p-6 mb-8 bg-[#0B0C10] border border-gray-800">
+            <div className="h-48">
               <ResponsiveContainer width="100%" height="100%">
-                <LineChart data={networkData}>
+                <LineChart data={networkData} margin={{ top: 10, right: 10, left: 10, bottom: 10 }}>
                   <CartesianGrid strokeDasharray="3 3" stroke="#374151" />
                   <XAxis dataKey="time" stroke="#9CA3AF" />
                   <YAxis stroke="#9CA3AF" />
@@ -153,7 +154,7 @@ const CryptoLanding = () => {
       <section id="ai-engine" className="py-24 px-6">
         <div className="container mx-auto">
           <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-6xl font-bold text-white mb-4">
+            <h2 className="text-4xl md:text-6xl font-bold text-white mb-4 font-heading">
               The <ColourfulText text="AI" /> Behind SolEra
             </h2>
             <p className="text-gray-400 text-lg text-center mb-12">
@@ -167,7 +168,7 @@ const CryptoLanding = () => {
               <div className="relative z-10">
                 <div className="flex items-center mb-4">
                   <Zap className="w-8 h-8 text-blue-500 mr-3" />
-                  <h3 className="text-2xl font-bold text-white">Sentiment Engine</h3>
+                  <h3 className="text-2xl font-semibold text-white font-heading">Sentiment Engine</h3>
                 </div>
                 <p className="text-gray-400 mb-6">
                   Monitors X (Twitter) + news sentiment in real-time to detect market mood shifts before they impact prices.
@@ -185,7 +186,7 @@ const CryptoLanding = () => {
               <div className="relative z-10">
                 <div className="flex items-center mb-4">
                   <TrendingUp className="w-8 h-8 text-blue-500 mr-3" />
-                  <h3 className="text-2xl font-bold text-white">Predictive Signals</h3>
+                  <h3 className="text-2xl font-semibold text-white font-heading">Predictive Signals</h3>
                 </div>
                 <p className="text-gray-400 mb-6">
                   Detects whale moves, breakouts, and pattern formations using advanced ML algorithms trained on Solana data.
@@ -205,7 +206,7 @@ const CryptoLanding = () => {
       <section id="ecosystem" className="py-24 px-6">
         <div className="container mx-auto">
           <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-6xl font-bold text-white mb-4">
+            <h2 className="text-4xl md:text-6xl font-bold text-white mb-4 font-heading">
               Powered by the <ColourfulText text="Solana" /> Ecosystem
             </h2>
             <p className="text-gray-400 text-lg text-center mb-12">
@@ -237,7 +238,7 @@ const CryptoLanding = () => {
       <section id="security" className="py-24 px-6">
         <div className="container mx-auto">
           <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-6xl font-bold text-white mb-4">
+            <h2 className="text-4xl md:text-6xl font-bold text-white mb-4 font-heading">
               Your Keys, Your <ColourfulText text="Control" />.
             </h2>
             <p className="text-gray-400 text-lg text-center mb-12">
@@ -248,17 +249,17 @@ const CryptoLanding = () => {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <div className="bg-[#0B0C10] border border-gray-800 rounded-xl p-8 text-center hover:border-blue-500 transition-colors group">
               <Shield className="w-12 h-12 text-blue-500 mx-auto mb-4 group-hover:text-[#06B6D4] transition-colors" />
-              <h3 className="text-xl font-bold text-white mb-2">End-to-end Encryption</h3>
+              <h3 className="text-xl font-semibold text-white mb-2 font-heading">End-to-end Encryption</h3>
               <p className="text-gray-400">All data transmission uses military-grade encryption protocols.</p>
             </div>
             <div className="bg-[#0B0C10] border border-gray-800 rounded-xl p-8 text-center hover:border-blue-500 transition-colors group">
               <Lock className="w-12 h-12 text-blue-500 mx-auto mb-4 group-hover:text-[#06B6D4] transition-colors" />
-              <h3 className="text-xl font-bold text-white mb-2">On-chain Verification</h3>
+              <h3 className="text-xl font-semibold text-white mb-2 font-heading">On-chain Verification</h3>
               <p className="text-gray-400">Every transaction is verified on the Solana blockchain in real-time.</p>
             </div>
             <div className="bg-[#0B0C10] border border-gray-800 rounded-xl p-8 text-center hover:border-blue-500 transition-colors group">
               <Link2 className="w-12 h-12 text-blue-500 mx-auto mb-4 group-hover:text-[#06B6D4] transition-colors" />
-              <h3 className="text-xl font-bold text-white mb-2">No Custodial Risk</h3>
+              <h3 className="text-xl font-semibold text-white mb-2 font-heading">No Custodial Risk</h3>
               <p className="text-gray-400">We never hold your funds. You maintain full control of your assets.</p>
             </div>
           </div>
@@ -269,7 +270,7 @@ const CryptoLanding = () => {
       <section id="roadmap" className="py-24 px-6">
         <div className="container mx-auto">
           <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-6xl font-bold text-white mb-4">
+            <h2 className="text-4xl md:text-6xl font-bold text-white mb-4 font-heading">
               The <ColourfulText text="SolEra" /> Roadmap
             </h2>
           </div>
@@ -284,7 +285,7 @@ const CryptoLanding = () => {
                     <div className="w-3 h-3 bg-blue-500 rounded-full mr-3"></div>
                     <span className="text-blue-500 font-semibold">Phase 1</span>
                   </div>
-                  <h3 className="text-xl font-bold text-white mb-2">Portfolio & Alerts</h3>
+                  <h3 className="text-xl font-semibold text-white mb-2 font-heading">Portfolio & Alerts</h3>
                   <p className="text-gray-400">Real-time portfolio tracking and customizable price alerts. (Now Live)</p>
                 </div>
               </div>
@@ -295,7 +296,7 @@ const CryptoLanding = () => {
                     <div className="w-3 h-3 bg-gray-600 rounded-full mr-3"></div>
                     <span className="text-gray-400 font-semibold">Phase 2</span>
                   </div>
-                  <h3 className="text-xl font-bold text-white mb-2">AI Insights & Auto-Trading</h3>
+                  <h3 className="text-xl font-semibold text-white mb-2 font-heading">AI Insights & Auto-Trading</h3>
                   <p className="text-gray-400">Advanced AI predictions and automated trading strategies. (Coming Soon)</p>
                 </div>
               </div>
@@ -306,7 +307,7 @@ const CryptoLanding = () => {
                     <div className="w-3 h-3 bg-gray-600 rounded-full mr-3"></div>
                     <span className="text-gray-400 font-semibold">Phase 3</span>
                   </div>
-                  <h3 className="text-xl font-bold text-white mb-2">Multi-Chain Expansion</h3>
+                  <h3 className="text-xl font-semibold text-white mb-2 font-heading">Multi-Chain Expansion</h3>
                   <p className="text-gray-400">Extend AI insights to Ethereum, BSC, and other major blockchains.</p>
                 </div>
               </div>
@@ -319,7 +320,7 @@ const CryptoLanding = () => {
       <section id="faq" className="py-24 px-6 border-t border-gray-800">
         <div className="container mx-auto">
           <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-6xl font-bold text-white mb-4">
+            <h2 className="text-4xl md:text-6xl font-bold text-white mb-4 font-heading">
               FAQ & <ColourfulText text="Support" />
             </h2>
           </div>
@@ -391,12 +392,22 @@ const CryptoLanding = () => {
       </section>
 
       {/* CTA Section */}
-      <section id="about" className="py-20 px-6 bg-gradient-to-b from-black to-blue-950/20">
-        <div className="container mx-auto text-center">
+      <section id="about" className="py-20 px-6 bg-gradient-to-b from-black to-blue-950/20 relative">
+        <div className="container mx-auto text-center relative">
           <div className="max-w-3xl mx-auto space-y-8">
-            <h2 className="text-4xl md:text-5xl font-bold">
-              Ready to trade <ColourfulText text="smarter" />?
-            </h2>
+            <div className="flex items-center justify-center gap-8">
+              <h2 className="text-4xl md:text-5xl font-bold font-heading">
+                Ready to trade <ColourfulText text="smarter" />?
+              </h2>
+              <div className="flex-shrink-0">
+                <AnimatedTooltip items={[{
+                  id: 1,
+                  name: "Aryan Pachori",
+                  designation: "Software Engineer",
+                  image: "/cat_pfp.jpg"
+                }]} />
+              </div>
+            </div>
             <p className="text-xl text-gray-400">
               Join the future of Solana trading with <ColourfulText text="AI-powered intelligence" />
             </p>
