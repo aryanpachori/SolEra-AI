@@ -81,7 +81,7 @@ const AIAssistant = () => {
           <SidebarContent>
             <div className="p-6 border-b border-white/10">
               <div className="flex items-center gap-2">
-                <Sparkles className="w-6 h-6 text-purple-500" />
+                <Sparkles className="w-6 h-6 text-blue-500" />
                 <span className="text-xl font-bold">SolEra AI</span>
               </div>
             </div>
@@ -111,7 +111,7 @@ const AIAssistant = () => {
             <div className="flex items-center gap-4">
               <SidebarTrigger />
               <div className="flex items-center gap-2">
-                <Sparkles className="w-6 h-6 text-purple-500" />
+                <Sparkles className="w-6 h-6 text-blue-500" />
                 <h1 className="text-2xl font-bold">AI Assistant</h1>
               </div>
             </div>
@@ -126,14 +126,14 @@ const AIAssistant = () => {
                   className={`flex gap-3 ${message.role === "user" ? "justify-end" : "justify-start"}`}
                 >
                   {message.role === "assistant" && (
-                    <div className="w-10 h-10 rounded-full bg-purple-600 flex items-center justify-center flex-shrink-0">
+                    <div className="w-10 h-10 rounded-full bg-blue-600 flex items-center justify-center flex-shrink-0">
                       <Bot className="w-5 h-5" />
                     </div>
                   )}
                   <div
                     className={`max-w-[80%] p-4 rounded-2xl ${
                       message.role === "user"
-                        ? "bg-purple-600 text-white"
+                        ? "bg-blue-600 text-white"
                         : "glass border border-white/10"
                     }`}
                   >
@@ -149,14 +149,14 @@ const AIAssistant = () => {
               
               {isLoading && (
                 <div className="flex gap-3">
-                  <div className="w-10 h-10 rounded-full bg-purple-600 flex items-center justify-center">
+                  <div className="w-10 h-10 rounded-full bg-blue-600 flex items-center justify-center">
                     <Bot className="w-5 h-5" />
                   </div>
                   <div className="glass border border-white/10 p-4 rounded-2xl">
                     <div className="flex gap-2">
-                      <div className="w-2 h-2 bg-purple-500 rounded-full animate-bounce" />
-                      <div className="w-2 h-2 bg-purple-500 rounded-full animate-bounce delay-100" />
-                      <div className="w-2 h-2 bg-purple-500 rounded-full animate-bounce delay-200" />
+                      <div className="w-2 h-2 bg-blue-500 rounded-full animate-bounce" />
+                      <div className="w-2 h-2 bg-blue-500 rounded-full animate-bounce delay-100" />
+                      <div className="w-2 h-2 bg-blue-500 rounded-full animate-bounce delay-200" />
                     </div>
                   </div>
                 </div>

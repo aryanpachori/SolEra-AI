@@ -42,7 +42,7 @@ const Auth = () => {
       
       <div className="w-full max-w-md relative z-10">
         <Link to="/" className="flex items-center justify-center gap-2 mb-8">
-          <Sparkles className="w-8 h-8 text-purple-500" />
+          <Sparkles className="w-8 h-8 text-blue-500" />
           <span className="text-2xl font-bold">SolEra AI</span>
         </Link>
 
@@ -105,7 +105,7 @@ const Auth = () => {
                 <Button
                   onClick={() => handleEmailAuth("login")}
                   disabled={isLoading}
-                  className="w-full bg-purple-600 hover:bg-purple-700"
+                  className="w-full bg-blue-600 hover:bg-blue-700"
                 >
                   {isLoading ? "Signing in..." : "Sign In"}
                 </Button>
@@ -137,7 +137,7 @@ const Auth = () => {
                 <Button
                   onClick={() => handleEmailAuth("signup")}
                   disabled={isLoading}
-                  className="w-full bg-purple-600 hover:bg-purple-700"
+                  className="w-full bg-blue-600 hover:bg-blue-700"
                 >
                   {isLoading ? "Creating account..." : "Create Account"}
                 </Button>

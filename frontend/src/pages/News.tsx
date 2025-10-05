@@ -73,7 +73,7 @@ const News = () => {
   ];
 
   const categoryColors: Record<string, string> = {
-    "Network": "bg-purple-500/20 text-purple-400 border-purple-500/30",
+    "Network": "bg-blue-500/20 text-blue-400 border-blue-500/30",
     "DeFi": "bg-blue-500/20 text-blue-400 border-blue-500/30",
     "Ecosystem": "bg-green-500/20 text-green-400 border-green-500/30",
     "Development": "bg-yellow-500/20 text-yellow-400 border-yellow-500/30",
@@ -87,7 +87,7 @@ const News = () => {
           <SidebarContent>
             <div className="p-6 border-b border-white/10">
               <div className="flex items-center gap-2">
-                <Sparkles className="w-6 h-6 text-purple-500" />
+                <Sparkles className="w-6 h-6 text-blue-500" />
                 <span className="text-xl font-bold">SolEra AI</span>
               </div>
             </div>
@@ -124,7 +124,7 @@ const News = () => {
             {/* Trending Section */}
             <div className="mb-8">
               <div className="flex items-center gap-2 mb-4">
-                <TrendingUp className="w-5 h-5 text-purple-500" />
+                <TrendingUp className="w-5 h-5 text-blue-500" />
                 <h2 className="text-xl font-bold">Trending Now</h2>
               </div>
               <div className="grid md:grid-cols-2 gap-6">
@@ -138,11 +138,11 @@ const News = () => {
                             <Badge className={categoryColors[item.category] + " mb-2 border"}>
                               {item.category}
                             </Badge>
-                            <CardTitle className="text-lg leading-tight group-hover:text-purple-400 transition-colors">
+                            <CardTitle className="text-lg leading-tight group-hover:text-blue-400 transition-colors">
                               {item.title}
                             </CardTitle>
                           </div>
-                          <TrendingUp className="w-5 h-5 text-purple-500 flex-shrink-0" />
+                          <TrendingUp className="w-5 h-5 text-blue-500 flex-shrink-0" />
                         </div>
                       </CardHeader>
                       <CardContent>
@@ -180,7 +180,7 @@ const News = () => {
                                 <span>{item.time}</span>
                               </div>
                             </div>
-                            <h3 className="text-lg font-semibold mb-2 group-hover:text-purple-400 transition-colors">
+                            <h3 className="text-lg font-semibold mb-2 group-hover:text-blue-400 transition-colors">
                               {item.title}
                             </h3>
                             <p className="text-sm text-gray-400 mb-2">{item.summary}</p>

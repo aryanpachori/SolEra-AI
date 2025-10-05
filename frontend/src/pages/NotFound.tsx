@@ -18,7 +18,7 @@ const NotFound = () => {
 
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
           <Link to="/">
-            <Button className="button-gradient">
+            <Button className="bg-gradient-to-r from-blue-600 to-blue-500 hover:from-blue-500 hover:to-blue-400 transition-all duration-300 rounded-full">
               <Home className="w-4 h-4 mr-2" />
               Back to Home
             </Button>

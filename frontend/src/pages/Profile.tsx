@@ -48,7 +48,7 @@ const Profile = () => {
           <SidebarContent>
             <div className="p-6 border-b border-white/10">
               <div className="flex items-center gap-2">
-                <Sparkles className="w-6 h-6 text-purple-500" />
+                <Sparkles className="w-6 h-6 text-blue-500" />
                 <span className="text-xl font-bold">SolEra AI</span>
               </div>
             </div>
@@ -89,9 +89,9 @@ const Profile = () => {
               </CardHeader>
               <CardContent className="space-y-6">
                 <div className="flex items-center gap-6">
-                  <Avatar className="w-20 h-20 border-2 border-purple-500">
+                  <Avatar className="w-20 h-20 border-2 border-blue-500">
                     <AvatarImage src="" />
-                    <AvatarFallback className="bg-purple-600 text-xl">JD</AvatarFallback>
+                    <AvatarFallback className="bg-blue-600 text-xl">JD</AvatarFallback>
                   </Avatar>
                   <div>
                     <Button variant="outline" className="border-white/20">
@@ -131,7 +131,7 @@ const Profile = () => {
               <CardContent>
                 <div className="flex items-center justify-between p-4 bg-secondary rounded-lg border border-white/10">
                   <div className="flex items-center gap-3">
-                    <Wallet className="w-5 h-5 text-purple-500" />
+                    <Wallet className="w-5 h-5 text-blue-500" />
                     <div>
                       <p className="font-medium">7xKXt...9Yw2</p>
                       <p className="text-xs text-gray-500">Phantom Wallet</p>

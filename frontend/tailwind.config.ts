@@ -61,10 +61,34 @@ export default {
         marquee: {
           '0%': { transform: 'translateX(0%)' },
           '100%': { transform: 'translateX(-100%)' }
-        }
+        },
+        "aurora": {
+          from: {
+            backgroundPosition: "50% 50%, 50% 50%",
+          },
+          to: {
+            backgroundPosition: "350% 50%, 350% 50%",
+          },
+        },
+        "scroll": {
+          to: {
+            transform: "translate(calc(-50% - 0.5rem))",
+          },
+        },
+        "shimmer": {
+          from: {
+            backgroundPosition: "0 0"
+          },
+          to: {
+            backgroundPosition: "-200% 0"
+          }
+        },
       },
       animation: {
-        marquee: 'marquee 40s linear infinite'
+        marquee: 'marquee 40s linear infinite',
+        aurora: "aurora 60s linear infinite",
+        scroll: "var(--animation-duration, 40s) var(--animation-timing-function, linear) var(--animation-delay, 0s) var(--animation-iteration-count, infinite) var(--animation-direction, normal) var(--animation-fill-mode, forwards) scroll",
+        shimmer: "shimmer 2s linear infinite",
       }
     },
   },

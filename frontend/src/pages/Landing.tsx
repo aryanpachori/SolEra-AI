@@ -25,7 +25,7 @@ const Landing = () => {
         </div>
         <Link to="/crypto-landing">
           <button className="bg-black dark:bg-white rounded-full w-fit text-white dark:text-black px-6 py-3">
-            Connect Wallet
+            Get Started
           </button>
         </Link>
       </motion.div>

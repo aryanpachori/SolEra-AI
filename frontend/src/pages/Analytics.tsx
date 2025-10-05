@@ -40,7 +40,7 @@ const Analytics = () => {
           <SidebarContent>
             <div className="p-6 border-b border-white/10">
               <div className="flex items-center gap-2">
-                <Sparkles className="w-6 h-6 text-purple-500" />
+                <Sparkles className="w-6 h-6 text-blue-500" />
                 <span className="text-xl font-bold">SolEra AI</span>
               </div>
             </div>
@@ -79,7 +79,7 @@ const Analytics = () => {
               <Card className="glass border-white/10">
                 <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
                   <CardTitle className="text-sm font-medium">Current TPS</CardTitle>
-                  <Activity className="h-4 w-4 text-purple-500" />
+                  <Activity className="h-4 w-4 text-blue-500" />
                 </CardHeader>
                 <CardContent>
                   <div className="text-3xl font-bold">3,842</div>
@@ -90,7 +90,7 @@ const Analytics = () => {
               <Card className="glass border-white/10">
                 <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
                   <CardTitle className="text-sm font-medium">Active Wallets</CardTitle>
-                  <Users className="h-4 w-4 text-purple-500" />
+                  <Users className="h-4 w-4 text-blue-500" />
                 </CardHeader>
                 <CardContent>
                   <div className="text-3xl font-bold">24.5K</div>
@@ -101,7 +101,7 @@ const Analytics = () => {
               <Card className="glass border-white/10">
                 <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
                   <CardTitle className="text-sm font-medium">Total Volume</CardTitle>
-                  <TrendingUp className="h-4 w-4 text-purple-500" />
+                  <TrendingUp className="h-4 w-4 text-blue-500" />
                 </CardHeader>
                 <CardContent>
                   <div className="text-3xl font-bold">$1.2B</div>
@@ -112,7 +112,7 @@ const Analytics = () => {
               <Card className="glass border-white/10">
                 <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
                   <CardTitle className="text-sm font-medium">Network Fee</CardTitle>
-                  <BarChart3 className="h-4 w-4 text-purple-500" />
+                  <BarChart3 className="h-4 w-4 text-blue-500" />
                 </CardHeader>
                 <CardContent>
                   <div className="text-3xl font-bold">0.00025</div>
@@ -131,8 +131,8 @@ const Analytics = () => {
                   <LineChart data={networkData}>
                     <CartesianGrid strokeDasharray="3 3" stroke="#ffffff10" />
                     <XAxis dataKey="time" stroke="#888" />
-                    <YAxis yAxisId="left" stroke="#8b5cf6" />
-                    <YAxis yAxisId="right" orientation="right" stroke="#a78bfa" />
+                    <YAxis yAxisId="left" stroke="#3b82f6" />
+                    <YAxis yAxisId="right" orientation="right" stroke="#60a5fa" />
                     <Tooltip 
                       contentStyle={{ backgroundColor: '#1a1a1a', border: '1px solid #333' }}
                     />
@@ -141,7 +141,7 @@ const Analytics = () => {
                       yAxisId="left"
                       type="monotone" 
                       dataKey="tps" 
-                      stroke="#8b5cf6" 
+                      stroke="#3b82f6" 
                       strokeWidth={2}
                       name="Transactions/sec"
                     />
@@ -149,7 +149,7 @@ const Analytics = () => {
                       yAxisId="right"
                       type="monotone" 
                       dataKey="users" 
-                      stroke="#a78bfa" 
+                      stroke="#60a5fa" 
                       strokeWidth={2}
                       name="Active Users"
                     />
@@ -172,7 +172,7 @@ const Analytics = () => {
                     <Tooltip 
                       contentStyle={{ backgroundColor: '#1a1a1a', border: '1px solid #333' }}
                     />
-                    <Bar dataKey="volume" fill="#8b5cf6" radius={[8, 8, 0, 0]} />
+                    <Bar dataKey="volume" fill="#3b82f6" radius={[8, 8, 0, 0]} />
                   </BarChart>
                 </ResponsiveContainer>
               </CardContent>
@@ -220,8 +220,8 @@ const Analytics = () => {
                   <CardTitle>Market Insights</CardTitle>
                 </CardHeader>
                 <CardContent className="space-y-3">
-                  <div className="p-3 bg-purple-500/10 border border-purple-500/20 rounded-lg">
-                    <p className="text-sm text-purple-400 font-medium">📈 SOL trending up</p>
+                  <div className="p-3 bg-blue-500/10 border border-blue-500/20 rounded-lg">
+                    <p className="text-sm text-blue-400 font-medium">📈 SOL trending up</p>
                     <p className="text-xs text-gray-400 mt-1">+8.2% in last 24h with strong volume</p>
                   </div>
                   <div className="p-3 bg-blue-500/10 border border-blue-500/20 rounded-lg">

@@ -1,28 +1,22 @@
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Sparkles, BarChart3, Bell, Zap } from "lucide-react";
+import InfiniteMovingCardsDemo from "@/components/ui/infinite-moving-cards-demo";
+import CryptoNavbarDemo from "@/components/ui/resizable-navbar-demo";
+import CryptoFloatingDockDemo from "@/components/ui/floating-dock-demo";
+import CryptoLayoutTextFlipDemo from "@/components/ui/layout-text-flip-demo";
+import CryptoAnimatedModalDemo from "@/components/ui/animated-modal-demo";
+import CryptoHeroHighlightDemo from "@/components/ui/hero-highlight-demo";
+import CryptoWobbleCardDemo from "@/components/ui/wobble-card-demo";
+import CryptoCardSpotlightDemo from "@/components/ui/card-spotlight-demo";
 
 const CryptoLanding = () => {
   return (
     <div className="min-h-screen bg-black text-white overflow-hidden">
-      {/* Navigation */}
-      <nav className="fixed top-0 left-0 right-0 z-50 border-b border-white/10 bg-black/50 backdrop-blur-lg">
-        <div className="container mx-auto px-6 py-4 flex items-center justify-between">
-          <div className="flex items-center gap-2">
-            <Sparkles className="w-6 h-6 text-purple-500" />
-            <span className="text-xl font-bold">SolEra AI</span>
-          </div>
-          <div className="hidden md:flex items-center gap-8">
-            <a href="#features" className="text-sm hover:text-purple-400 transition-colors">Features</a>
-            <a href="#about" className="text-sm hover:text-purple-400 transition-colors">About</a>
-            <Link to="/auth">
-              <Button variant="outline" className="border-purple-500/50 hover:bg-purple-500/10">
-                Sign In
-              </Button>
-            </Link>
-          </div>
-        </div>
-      </nav>
+      {/* Floating Dock Navigation */}
+      <div className="fixed top-8 left-1/2 transform -translate-x-1/2 z-50">
+        <CryptoFloatingDockDemo />
+      </div>
 
       {/* Hero Section */}
       <section className="relative pt-32 pb-20 px-6">
@@ -30,26 +24,20 @@ const CryptoLanding = () => {
         
         <div className="container mx-auto text-center relative z-10">
           <div className="max-w-4xl mx-auto space-y-8">
-            <h1 className="text-5xl md:text-7xl font-bold leading-tight">
-              Trade smarter on Solana with{" "}
-              <span className="text-gradient">SolEra AI</span>
-            </h1>
-            
-            <p className="text-xl md:text-2xl text-gray-400 max-w-2xl mx-auto">
-              Set price alerts, track your portfolio, and act instantly — guided by AI.
-            </p>
+            <div className="text-5xl md:text-7xl font-bold leading-tight text-white">
+              <CryptoLayoutTextFlipDemo />
+            </div>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center pt-4">
               <Link to="/auth">
-                <Button size="lg" className="button-gradient px-8 text-lg h-14">
-                  Connect Wallet
-                </Button>
+                <button className="relative inline-flex h-14 overflow-hidden rounded-full p-[1px] focus:outline-none focus:ring-2 focus:ring-blue-400 focus:ring-offset-2 focus:ring-offset-slate-50">
+                  <span className="absolute inset-[-1000%] animate-[spin_2s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,#60a5fa_0%,#3b82f6_50%,#60a5fa_100%)]" />
+                  <span className="inline-flex h-full w-full cursor-pointer items-center justify-center rounded-full bg-black px-8 text-lg font-medium text-white backdrop-blur-3xl">
+                    Connect Wallet
+                  </span>
+                </button>
               </Link>
-              <Link to="/auth">
-                <Button size="lg" variant="outline" className="border-white/20 hover:bg-white/5 h-14 px-8">
-                  Sign Up with Email
-                </Button>
-              </Link>
+              <CryptoAnimatedModalDemo />
             </div>
           </div>
         </div>
@@ -67,43 +55,27 @@ const CryptoLanding = () => {
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
-            <FeatureCard
-              icon={<BarChart3 className="w-10 h-10 text-purple-500" />}
-              title="Portfolio Tracking"
-              description="Monitor all your Solana assets in real-time with advanced charts and analytics"
-            />
-            <FeatureCard
-              icon={<Bell className="w-10 h-10 text-purple-500" />}
-              title="Price Alerts"
-              description="Never miss important price movements with customizable alerts"
-            />
-            <FeatureCard
-              icon={<Sparkles className="w-10 h-10 text-purple-500" />}
-              title="AI-Powered Insights"
-              description="Get intelligent analysis and recommendations from our advanced AI"
-            />
-            <FeatureCard
-              icon={<Zap className="w-10 h-10 text-purple-500" />}
-              title="Real-time Data"
-              description="Access live blockchain data and market updates instantly"
-            />
-            <FeatureCard
-              icon={<BarChart3 className="w-10 h-10 text-purple-500" />}
-              title="Advanced Analytics"
-              description="Deep dive into on-chain metrics and trading patterns"
-            />
-            <FeatureCard
-              icon={<Sparkles className="w-10 h-10 text-purple-500" />}
-              title="News & Updates"
-              description="Stay informed with curated Solana ecosystem news"
-            />
+          <CryptoWobbleCardDemo />
+        </div>
+      </section>
+
+      {/* Testimonials Section */}
+      <section className="py-20 px-6">
+        <div className="container mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl md:text-5xl font-bold mb-4">
+              What Our <span className="text-gradient">Users Say</span>
+            </h2>
+            <p className="text-gray-400 text-lg max-w-2xl mx-auto">
+              Join thousands of traders who are already using SolEra AI to maximize their Solana trading potential
+            </p>
           </div>
+          <InfiniteMovingCardsDemo />
         </div>
       </section>
 
       {/* CTA Section */}
-      <section id="about" className="py-20 px-6 bg-gradient-to-b from-black to-purple-950/20">
+      <section id="about" className="py-20 px-6 bg-gradient-to-b from-black to-blue-950/20">
         <div className="container mx-auto text-center">
           <div className="max-w-3xl mx-auto space-y-8">
             <h2 className="text-4xl md:text-5xl font-bold">
@@ -127,6 +99,7 @@ const CryptoLanding = () => {
           <p>&copy; 2025 SolEra AI. Built on Solana.</p>
         </div>
       </footer>
+
     </div>
   );
 };

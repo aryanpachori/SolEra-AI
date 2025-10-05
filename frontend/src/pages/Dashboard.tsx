@@ -27,9 +27,9 @@ const Dashboard = () => {
   ];
 
   const assetAllocation = [
-    { name: "SOL", value: 45, color: "#8b5cf6" },
-    { name: "USDC", value: 30, color: "#a78bfa" },
-    { name: "Other", value: 25, color: "#c4b5fd" },
+    { name: "SOL", value: 45, color: "#3b82f6" },
+    { name: "USDC", value: 30, color: "#60a5fa" },
+    { name: "Other", value: 25, color: "#93c5fd" },
   ];
 
   const holdings = [
@@ -46,7 +46,7 @@ const Dashboard = () => {
           <SidebarContent>
             <div className="p-6 border-b border-white/10">
               <div className="flex items-center gap-2">
-                <Sparkles className="w-6 h-6 text-purple-500" />
+                <Sparkles className="w-6 h-6 text-blue-500" />
                 <span className="text-xl font-bold">SolEra AI</span>
               </div>
             </div>
@@ -85,7 +85,7 @@ const Dashboard = () => {
               <Card className="glass border-white/10">
                 <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
                   <CardTitle className="text-sm font-medium">Total Balance</CardTitle>
-                  <Wallet className="h-4 w-4 text-purple-500" />
+                  <Wallet className="h-4 w-4 text-blue-500" />
                 </CardHeader>
                 <CardContent>
                   <div className="text-3xl font-bold">$3,800</div>
@@ -96,7 +96,7 @@ const Dashboard = () => {
               <Card className="glass border-white/10">
                 <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
                   <CardTitle className="text-sm font-medium">24h Change</CardTitle>
-                  <TrendingUp className="h-4 w-4 text-purple-500" />
+                  <TrendingUp className="h-4 w-4 text-blue-500" />
                 </CardHeader>
                 <CardContent>
                   <div className="text-3xl font-bold">+$142</div>
@@ -107,7 +107,7 @@ const Dashboard = () => {
               <Card className="glass border-white/10">
                 <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
                   <CardTitle className="text-sm font-medium">Total Assets</CardTitle>
-                  <BarChart3 className="h-4 w-4 text-purple-500" />
+                  <BarChart3 className="h-4 w-4 text-blue-500" />
                 </CardHeader>
                 <CardContent>
                   <div className="text-3xl font-bold">4</div>
@@ -127,8 +127,8 @@ const Dashboard = () => {
                     <AreaChart data={portfolioData}>
                       <defs>
                         <linearGradient id="colorValue" x1="0" y1="0" x2="0" y2="1">
-                          <stop offset="5%" stopColor="#8b5cf6" stopOpacity={0.3}/>
-                          <stop offset="95%" stopColor="#8b5cf6" stopOpacity={0}/>
+                          <stop offset="5%" stopColor="#3b82f6" stopOpacity={0.3}/>
+                          <stop offset="95%" stopColor="#3b82f6" stopOpacity={0}/>
                         </linearGradient>
                       </defs>
                       <CartesianGrid strokeDasharray="3 3" stroke="#ffffff10" />
@@ -140,7 +140,7 @@ const Dashboard = () => {
                       <Area 
                         type="monotone" 
                         dataKey="value" 
-                        stroke="#8b5cf6" 
+                        stroke="#3b82f6" 
                         fillOpacity={1} 
                         fill="url(#colorValue)" 
                       />
