@@ -46,7 +46,7 @@ export default function CryptoAnimatedModalDemo() {
   return (
     <Modal>
       <ModalTrigger className="px-8 py-2 border border-white bg-transparent text-white relative group transition duration-200 h-14">
-        <div className="absolute -bottom-2 -right-2 bg-yellow-300 h-full w-full -z-10 group-hover:bottom-0 group-hover:right-0 transition-all duration-200" />
+        <div className="absolute -bottom-2 -right-2 bg-blue-300 h-full w-full -z-10 group-hover:bottom-0 group-hover:right-0 transition-all duration-200" />
         <span className="relative text-lg font-medium">
           Sign Up with Email
         </span>

@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
-import { Sparkles, BarChart3, Bell, Zap } from "lucide-react";
+import { Sparkles, BarChart3, Bell, Zap, Wallet } from "lucide-react";
 import InfiniteMovingCardsDemo from "@/components/ui/infinite-moving-cards-demo";
 import CryptoNavbarDemo from "@/components/ui/resizable-navbar-demo";
 import CryptoFloatingDockDemo from "@/components/ui/floating-dock-demo";
@@ -8,7 +8,7 @@ import CryptoLayoutTextFlipDemo from "@/components/ui/layout-text-flip-demo";
 import CryptoAnimatedModalDemo from "@/components/ui/animated-modal-demo";
 import CryptoHeroHighlightDemo from "@/components/ui/hero-highlight-demo";
 import CryptoWobbleCardDemo from "@/components/ui/wobble-card-demo";
-import CryptoCardSpotlightDemo from "@/components/ui/card-spotlight-demo";
+import { HoverBorderGradient } from "@/components/ui/hover-border-gradient";
 
 const CryptoLanding = () => {
   return (
@@ -30,12 +30,14 @@ const CryptoLanding = () => {
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center pt-4">
               <Link to="/auth">
-                <button className="relative inline-flex h-14 overflow-hidden rounded-full p-[1px] focus:outline-none focus:ring-2 focus:ring-blue-400 focus:ring-offset-2 focus:ring-offset-slate-50">
-                  <span className="absolute inset-[-1000%] animate-[spin_2s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,#60a5fa_0%,#3b82f6_50%,#60a5fa_100%)]" />
-                  <span className="inline-flex h-full w-full cursor-pointer items-center justify-center rounded-full bg-black px-8 text-lg font-medium text-white backdrop-blur-3xl">
-                    Connect Wallet
-                  </span>
-                </button>
+                <HoverBorderGradient
+                  containerClassName="rounded-full"
+                  as="button"
+                  className="bg-black text-white flex items-center space-x-2 px-8 py-4 text-lg font-medium"
+                >
+                  <Wallet className="w-5 h-5" />
+                  <span>Connect Wallet</span>
+                </HoverBorderGradient>
               </Link>
               <CryptoAnimatedModalDemo />
             </div>

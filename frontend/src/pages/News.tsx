@@ -76,7 +76,7 @@ const News = () => {
     "Network": "bg-blue-500/20 text-blue-400 border-blue-500/30",
     "DeFi": "bg-blue-500/20 text-blue-400 border-blue-500/30",
     "Ecosystem": "bg-green-500/20 text-green-400 border-green-500/30",
-    "Development": "bg-yellow-500/20 text-yellow-400 border-yellow-500/30",
+    "Development": "bg-blue-500/20 text-blue-400 border-blue-500/30",
     "NFTs": "bg-pink-500/20 text-pink-400 border-pink-500/30",
   };
 

@@ -188,10 +188,10 @@ const Analytics = () => {
                   <div className="space-y-2">
                     <div className="flex justify-between text-sm">
                       <span className="text-gray-400">Portfolio Volatility</span>
-                      <span className="font-medium text-yellow-500">Moderate</span>
+                      <span className="font-medium text-blue-500">Moderate</span>
                     </div>
                     <div className="h-2 bg-secondary rounded-full overflow-hidden">
-                      <div className="h-full w-3/5 bg-gradient-to-r from-green-500 to-yellow-500 rounded-full" />
+                      <div className="h-full w-3/5 bg-gradient-to-r from-green-500 to-blue-500 rounded-full" />
                     </div>
                   </div>
                   <div className="space-y-2">
