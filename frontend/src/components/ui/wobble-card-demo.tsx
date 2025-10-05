@@ -63,10 +63,10 @@ export default function CryptoWobbleCardDemo() {
       </WobbleCard>
 
       {/* Medium card for Price Alerts */}
-      <WobbleCard containerClassName="col-span-1 min-h-[180px] bg-gradient-to-br from-indigo-900 to-indigo-800">
+      <WobbleCard containerClassName="col-span-1 min-h-[180px] bg-gradient-to-br from-blue-900 to-blue-800">
         <div className="relative z-10">
           <div className="flex items-center mb-2">
-            <Bell className="w-6 h-6 text-indigo-300 mr-2" />
+            <Bell className="w-6 h-6 text-blue-300 mr-2" />
             <h2 className="text-left text-balance text-base md:text-lg font-semibold tracking-[-0.015em] text-white">
               Price Alerts
             </h2>
@@ -76,15 +76,15 @@ export default function CryptoWobbleCardDemo() {
           </p>
         </div>
         <div className="absolute -right-2 -bottom-2 opacity-10">
-          <Bell className="w-12 h-12 text-indigo-300" />
+          <Bell className="w-12 h-12 text-blue-300" />
         </div>
       </WobbleCard>
 
       {/* Medium card for AI-Powered Insights */}
-      <WobbleCard containerClassName="col-span-1 min-h-[180px] bg-gradient-to-br from-purple-900 to-purple-800">
+      <WobbleCard containerClassName="col-span-1 min-h-[180px] bg-gradient-to-br from-blue-800 to-blue-700">
         <div className="relative z-10">
           <div className="flex items-center mb-2">
-            <Sparkles className="w-6 h-6 text-purple-300 mr-2" />
+            <Sparkles className="w-6 h-6 text-blue-300 mr-2" />
             <h2 className="text-left text-balance text-base md:text-lg font-semibold tracking-[-0.015em] text-white">
               AI-Powered Insights
             </h2>
@@ -94,15 +94,15 @@ export default function CryptoWobbleCardDemo() {
           </p>
         </div>
         <div className="absolute -right-2 -bottom-2 opacity-10">
-          <Sparkles className="w-12 h-12 text-purple-300" />
+          <Sparkles className="w-12 h-12 text-blue-300" />
         </div>
       </WobbleCard>
 
       {/* Medium card for Real-time Data */}
-      <WobbleCard containerClassName="col-span-1 min-h-[180px] bg-gradient-to-br from-green-900 to-green-800">
+      <WobbleCard containerClassName="col-span-1 min-h-[180px] bg-gradient-to-br from-blue-700 to-blue-600">
         <div className="relative z-10">
           <div className="flex items-center mb-2">
-            <Zap className="w-6 h-6 text-green-300 mr-2" />
+            <Zap className="w-6 h-6 text-blue-300 mr-2" />
             <h2 className="text-left text-balance text-base md:text-lg font-semibold tracking-[-0.015em] text-white">
               Real-time Data
             </h2>
@@ -112,15 +112,15 @@ export default function CryptoWobbleCardDemo() {
           </p>
         </div>
         <div className="absolute -right-2 -bottom-2 opacity-10">
-          <Zap className="w-12 h-12 text-green-300" />
+          <Zap className="w-12 h-12 text-blue-300" />
         </div>
       </WobbleCard>
 
       {/* Medium card for Advanced Analytics */}
-      <WobbleCard containerClassName="col-span-1 min-h-[180px] bg-gradient-to-br from-orange-900 to-orange-800">
+      <WobbleCard containerClassName="col-span-1 min-h-[180px] bg-gradient-to-br from-blue-600 to-blue-500">
         <div className="relative z-10">
           <div className="flex items-center mb-2">
-            <TrendingUp className="w-6 h-6 text-orange-300 mr-2" />
+            <TrendingUp className="w-6 h-6 text-blue-300 mr-2" />
             <h2 className="text-left text-balance text-base md:text-lg font-semibold tracking-[-0.015em] text-white">
               Advanced Analytics
             </h2>
@@ -130,15 +130,15 @@ export default function CryptoWobbleCardDemo() {
           </p>
         </div>
         <div className="absolute -right-2 -bottom-2 opacity-10">
-          <TrendingUp className="w-12 h-12 text-orange-300" />
+          <TrendingUp className="w-12 h-12 text-blue-300" />
         </div>
       </WobbleCard>
 
       {/* Medium card for News & Updates */}
-      <WobbleCard containerClassName="col-span-1 min-h-[180px] bg-gradient-to-br from-teal-900 to-teal-800">
+      <WobbleCard containerClassName="col-span-1 min-h-[180px] bg-gradient-to-br from-blue-500 to-blue-400">
         <div className="relative z-10">
           <div className="flex items-center mb-2">
-            <Newspaper className="w-6 h-6 text-teal-300 mr-2" />
+            <Newspaper className="w-6 h-6 text-blue-300 mr-2" />
             <h2 className="text-left text-balance text-base md:text-lg font-semibold tracking-[-0.015em] text-white">
               News & Updates
             </h2>
@@ -148,7 +148,7 @@ export default function CryptoWobbleCardDemo() {
           </p>
         </div>
         <div className="absolute -right-2 -bottom-2 opacity-10">
-          <Newspaper className="w-12 h-12 text-teal-300" />
+          <Newspaper className="w-12 h-12 text-blue-300" />
         </div>
       </WobbleCard>
     </div>

@@ -9,29 +9,29 @@
   :root {
     --background: 0 0% 0%;
     --foreground: 0 0% 100%;
-    --card: 0 0% 5%;
+    --card: 240 8% 4%;
     --card-foreground: 0 0% 100%;
-    --popover: 0 0% 5%;
+    --popover: 240 8% 4%;
     --popover-foreground: 0 0% 100%;
-    --primary: 270 70% 55%;
+    --primary: 217 91% 60%;
     --primary-foreground: 0 0% 100%;
-    --secondary: 0 0% 10%;
+    --secondary: 271 81% 56%;
     --secondary-foreground: 0 0% 100%;
     --muted: 0 0% 10%;
     --muted-foreground: 0 0% 60%;
-    --accent: 270 70% 55%;
+    --accent: 217 91% 60%;
     --accent-foreground: 0 0% 100%;
     --destructive: 0 84% 60%;
     --destructive-foreground: 0 0% 100%;
     --border: 0 0% 15%;
     --input: 0 0% 15%;
-    --ring: 270 70% 55%;
+    --ring: 217 91% 60%;
     --radius: 0.75rem;
-    --chart-1: 270 70% 55%;
-    --chart-2: 280 70% 65%;
-    --chart-3: 260 70% 50%;
-    --chart-4: 290 70% 60%;
-    --chart-5: 250 70% 55%;
+    --chart-1: 217 91% 60%;
+    --chart-2: 221 83% 53%;
+    --chart-3: 217 91% 60%;
+    --chart-4: 217 91% 60%;
+    --chart-5: 217 91% 60%;
   }
 }
 
@@ -71,19 +71,19 @@
 }
 
 .text-gradient {
-  @apply bg-clip-text text-transparent bg-gradient-to-r from-purple-500 via-purple-400 to-pink-400;
+  @apply bg-clip-text text-transparent bg-gradient-to-r from-blue-500 via-blue-400 to-blue-300;
 }
 
 .button-gradient {
-  @apply bg-gradient-to-r from-purple-600 to-purple-500 hover:from-purple-500 hover:to-purple-400 transition-all duration-300 rounded-full;
+  @apply bg-gradient-to-r from-blue-600 to-blue-500 hover:from-blue-500 hover:to-blue-400 transition-all duration-300 rounded-full;
 }
 
 .hero-gradient {
-  background: radial-gradient(ellipse 80% 50% at 50% -20%, rgba(120, 119, 198, 0.3), transparent);
+  background: radial-gradient(ellipse 80% 50% at 50% -20%, rgba(37, 99, 235, 0.3), transparent);
 }
 
 .glow-effect {
-  box-shadow: 0 0 40px rgba(168, 85, 247, 0.4);
+  box-shadow: 0 0 40px rgba(37, 99, 235, 0.4);
 }
 
 @keyframes aurora {

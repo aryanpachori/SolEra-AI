@@ -4,16 +4,16 @@ import { motion } from "framer-motion";
 
 export default function ColourfulText({ text }: { text: string }) {
   const colors = [
-    "rgb(131, 179, 32)",
-    "rgb(47, 195, 106)",
-    "rgb(42, 169, 210)",
-    "rgb(4, 112, 202)",
-    "rgb(107, 10, 255)",
-    "rgb(183, 0, 218)",
-    "rgb(218, 0, 171)",
-    "rgb(230, 64, 92)",
-    "rgb(232, 98, 63)",
-    "rgb(249, 129, 47)",
+    "rgb(37, 99, 235)", // blue-600 - main blue
+    "rgb(59, 130, 246)", // blue-500 - lighter blue
+    "rgb(96, 165, 250)", // blue-400 - even lighter
+    "rgb(147, 197, 253)", // blue-300 - light blue
+    "rgb(191, 219, 254)", // blue-200 - very light blue
+    "rgb(239, 246, 255)", // blue-50 - almost white blue
+    "rgb(30, 64, 175)", // blue-800 - darker blue
+    "rgb(29, 78, 216)", // blue-700 - dark blue
+    "rgb(37, 99, 235)", // blue-600 - main blue (repeat)
+    "rgb(59, 130, 246)", // blue-500 - lighter blue (repeat)
   ];
 
   const [currentColors, setCurrentColors] = React.useState(colors);

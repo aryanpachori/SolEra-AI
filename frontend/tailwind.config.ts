@@ -26,14 +26,20 @@ export default {
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
         ring: "hsl(var(--ring))",
-        background: "hsl(var(--background))",
+        background: {
+          DEFAULT: "hsl(var(--background))",
+          card: "#0B0B0F",
+        },
         foreground: "hsl(var(--foreground))",
         primary: {
-          DEFAULT: "hsl(var(--primary))",
+          DEFAULT: "#2563EB",
+          light: "#3B82F6",
+          dark: "#1E40AF",
           foreground: "hsl(var(--primary-foreground))",
         },
         secondary: {
-          DEFAULT: "hsl(var(--secondary))",
+          DEFAULT: "#A855F7",
+          light: "#C084FC",
           foreground: "hsl(var(--secondary-foreground))",
         },
         destructive: {
@@ -56,6 +62,13 @@ export default {
           DEFAULT: "hsl(var(--card))",
           foreground: "hsl(var(--card-foreground))",
         },
+        text: {
+          primary: "#FFFFFF",
+          muted: "#9CA3AF",
+        },
+        success: "#10B981",
+        error: "#EF4444",
+        warning: "#F59E0B",
       },
       keyframes: {
         marquee: {
