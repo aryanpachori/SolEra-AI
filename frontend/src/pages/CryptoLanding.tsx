@@ -9,8 +9,16 @@ import CryptoAnimatedModalDemo from "@/components/ui/animated-modal-demo";
 import CryptoHeroHighlightDemo from "@/components/ui/hero-highlight-demo";
 import CryptoWobbleCardDemo from "@/components/ui/wobble-card-demo";
 import { HoverBorderGradient } from "@/components/ui/hover-border-gradient";
+import ColourfulText from "@/components/ui/colourful-text";
 
 const CryptoLanding = () => {
+  const scrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth'
+    });
+  };
+
   return (
     <div className="min-h-screen bg-black text-white overflow-hidden">
       {/* Floating Dock Navigation */}
@@ -81,16 +89,17 @@ const CryptoLanding = () => {
         <div className="container mx-auto text-center">
           <div className="max-w-3xl mx-auto space-y-8">
             <h2 className="text-4xl md:text-5xl font-bold">
-              Ready to trade smarter?
+              Ready to trade <ColourfulText text="smarter" />?
             </h2>
             <p className="text-xl text-gray-400">
-              Join the future of Solana trading with AI-powered intelligence
+              Join the future of Solana trading with <ColourfulText text="AI-powered intelligence" />
             </p>
-            <Link to="/auth">
-              <Button size="lg" className="button-gradient px-8 text-lg h-14">
-                Get Started Now
-              </Button>
-            </Link>
+            <button 
+              onClick={scrollToTop}
+              className="button-gradient px-8 text-lg h-14 rounded-full transition-all duration-300 hover:scale-105"
+            >
+              Get Started Now
+            </button>
           </div>
         </div>
       </section>
