@@ -14,14 +14,48 @@ import { useState } from "react";
 import { Link } from "react-router-dom";
 
 export default function CryptoNavbarDemo() {
+  const scrollToSection = (sectionId: string) => {
+    const element = document.getElementById(sectionId);
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
   const navItems = [
     {
       name: "Features",
       link: "#features",
+      onClick: () => scrollToSection('features'),
     },
     {
-      name: "About",
-      link: "#about",
+      name: "Network Pulse",
+      link: "#network-pulse",
+      onClick: () => scrollToSection('network-pulse'),
+    },
+    {
+      name: "AI Engine",
+      link: "#ai-engine",
+      onClick: () => scrollToSection('ai-engine'),
+    },
+    {
+      name: "Ecosystem",
+      link: "#ecosystem",
+      onClick: () => scrollToSection('ecosystem'),
+    },
+    {
+      name: "Security",
+      link: "#security",
+      onClick: () => scrollToSection('security'),
+    },
+    {
+      name: "Roadmap",
+      link: "#roadmap",
+      onClick: () => scrollToSection('roadmap'),
+    },
+    {
+      name: "FAQ",
+      link: "#faq",
+      onClick: () => scrollToSection('faq'),
     },
   ];
 
@@ -34,14 +68,6 @@ export default function CryptoNavbarDemo() {
         <NavBody>
           <NavbarLogo />
           <NavItems items={navItems} />
-          <div className="flex items-center gap-4">
-            <Link to="/auth">
-              <NavbarButton variant="secondary">Sign In</NavbarButton>
-            </Link>
-            <Link to="/auth">
-              <NavbarButton variant="gradient">Get Started</NavbarButton>
-            </Link>
-          </div>
         </NavBody>
 
         {/* Mobile Navigation */}
@@ -62,32 +88,18 @@ export default function CryptoNavbarDemo() {
               <a
                 key={`mobile-link-${idx}`}
                 href={item.link}
-                onClick={() => setIsMobileMenuOpen(false)}
-                className="relative text-white hover:text-blue-400"
+                onClick={(e) => {
+                  e.preventDefault();
+                  setIsMobileMenuOpen(false);
+                  if (item.onClick) {
+                    item.onClick();
+                  }
+                }}
+                className="relative text-white hover:text-blue-400 cursor-pointer"
               >
                 <span className="block">{item.name}</span>
               </a>
             ))}
-            <div className="flex w-full flex-col gap-4">
-              <Link to="/auth">
-                <NavbarButton
-                  onClick={() => setIsMobileMenuOpen(false)}
-                  variant="secondary"
-                  className="w-full"
-                >
-                  Sign In
-                </NavbarButton>
-              </Link>
-              <Link to="/auth">
-                <NavbarButton
-                  onClick={() => setIsMobileMenuOpen(false)}
-                  variant="gradient"
-                  className="w-full"
-                >
-                  Get Started
-                </NavbarButton>
-              </Link>
-            </div>
           </MobileNavMenu>
         </MobileNav>
       </Navbar>

@@ -26,6 +26,7 @@ interface NavItemsProps {
   items: {
     name: string;
     link: string;
+    onClick?: () => void;
   }[];
   className?: string;
   onItemClick?: () => void;
@@ -127,8 +128,15 @@ export const NavItems = ({ items, className, onItemClick }: NavItemsProps) => {
       {items.map((item, idx) => (
         <a
           onMouseEnter={() => setHovered(idx)}
-          onClick={onItemClick}
-          className="relative px-4 py-2 text-white hover:text-blue-400"
+          onClick={(e) => {
+            e.preventDefault();
+            if (item.onClick) {
+              item.onClick();
+            } else if (onItemClick) {
+              onItemClick();
+            }
+          }}
+          className="relative px-4 py-2 text-white hover:text-blue-400 cursor-pointer"
           key={`link-${idx}`}
           href={item.link}
         >
