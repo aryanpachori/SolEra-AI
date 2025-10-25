@@ -5,7 +5,6 @@ import InfiniteMovingCardsDemo from "@/components/ui/infinite-moving-cards-demo"
 import CryptoNavbarDemo from "@/components/ui/resizable-navbar-demo";
 import CryptoFloatingDockDemo from "@/components/ui/floating-dock-demo";
 import CryptoLayoutTextFlipDemo from "@/components/ui/layout-text-flip-demo";
-import CryptoAnimatedModalDemo from "@/components/ui/animated-modal-demo";
 import CryptoHeroHighlightDemo from "@/components/ui/hero-highlight-demo";
 import CryptoWobbleCardDemo from "@/components/ui/wobble-card-demo";
 import { HoverBorderGradient } from "@/components/ui/hover-border-gradient";
@@ -50,7 +49,7 @@ const CryptoLanding = () => {
             </div>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center pt-4">
-              <Link to="/auth">
+              <Link to="/dashboard">
                 <HoverBorderGradient
                   containerClassName="rounded-full"
                   as="button"
@@ -60,7 +59,14 @@ const CryptoLanding = () => {
                   <span>Connect Wallet</span>
                 </HoverBorderGradient>
               </Link>
-              <CryptoAnimatedModalDemo />
+              <Link to="/auth">
+                <button className="px-8 py-2 border border-white bg-transparent text-white relative group transition duration-200 h-14">
+                  <div className="absolute -bottom-2 -right-2 bg-blue-300 h-full w-full -z-10 group-hover:bottom-0 group-hover:right-0 transition-all duration-200" />
+                  <span className="relative text-lg font-medium">
+                    Sign Up with Email
+                  </span>
+                </button>
+              </Link>
             </div>
           </div>
         </div>

@@ -5,7 +5,7 @@ import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { Sparkles, Wallet } from "lucide-react";
+import { Sparkles } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
 
 const Auth = () => {
@@ -28,13 +28,6 @@ const Auth = () => {
     }, 1000);
   };
 
-  const handleWalletConnect = () => {
-    toast({
-      title: "Wallet Connection",
-      description: "Please install a Solana wallet (Phantom, Solflare) to continue",
-    });
-    // TODO: Implement Solana wallet adapter
-  };
 
   return (
     <div className="min-h-screen bg-black text-white flex items-center justify-center p-6">
@@ -50,28 +43,10 @@ const Auth = () => {
           <CardHeader className="text-center">
             <CardTitle className="text-2xl">Welcome to SolEra</CardTitle>
             <CardDescription className="text-gray-400">
-              Connect your wallet or sign in with email
+              Sign in with your email to get started
             </CardDescription>
           </CardHeader>
           <CardContent className="space-y-6">
-            {/* Wallet Connect */}
-            <Button
-              onClick={handleWalletConnect}
-              className="w-full button-gradient h-12 text-lg"
-            >
-              <Wallet className="w-5 h-5 mr-2" />
-              Connect Wallet
-            </Button>
-
-            <div className="relative">
-              <div className="absolute inset-0 flex items-center">
-                <span className="w-full border-t border-white/10" />
-              </div>
-              <div className="relative flex justify-center text-xs uppercase">
-                <span className="bg-card px-2 text-gray-500">Or continue with</span>
-              </div>
-            </div>
-
             {/* Email/Password Auth */}
             <Tabs defaultValue="login" className="w-full">
               <TabsList className="grid w-full grid-cols-2 bg-[#0B0C10] border border-gray-800">
