@@ -74,9 +74,9 @@ const Auth = () => {
 
             {/* Email/Password Auth */}
             <Tabs defaultValue="login" className="w-full">
-              <TabsList className="grid w-full grid-cols-2 bg-secondary">
-                <TabsTrigger value="login">Login</TabsTrigger>
-                <TabsTrigger value="signup">Sign Up</TabsTrigger>
+              <TabsList className="grid w-full grid-cols-2 bg-[#0B0C10] border border-gray-800">
+                <TabsTrigger value="login" className="data-[state=active]:bg-blue-500 data-[state=active]:text-white">Login</TabsTrigger>
+                <TabsTrigger value="signup" className="data-[state=active]:bg-blue-500 data-[state=active]:text-white">Sign Up</TabsTrigger>
               </TabsList>
 
               <TabsContent value="login" className="space-y-4 mt-4">
@@ -88,7 +88,7 @@ const Auth = () => {
                     placeholder="you@example.com"
                     value={email}
                     onChange={(e) => setEmail(e.target.value)}
-                    className="bg-secondary border-white/10"
+                    className="bg-[#0B0C10] border-gray-800 focus:border-blue-500"
                   />
                 </div>
                 <div className="space-y-2">
@@ -99,13 +99,13 @@ const Auth = () => {
                     placeholder="••••••••"
                     value={password}
                     onChange={(e) => setPassword(e.target.value)}
-                    className="bg-secondary border-white/10"
+                    className="bg-[#0B0C10] border-gray-800 focus:border-blue-500"
                   />
                 </div>
                 <Button
                   onClick={() => handleEmailAuth("login")}
                   disabled={isLoading}
-                  className="w-full bg-blue-600 hover:bg-blue-700"
+                  className="w-full button-gradient"
                 >
                   {isLoading ? "Signing in..." : "Sign In"}
                 </Button>
@@ -120,7 +120,7 @@ const Auth = () => {
                     placeholder="you@example.com"
                     value={email}
                     onChange={(e) => setEmail(e.target.value)}
-                    className="bg-secondary border-white/10"
+                    className="bg-[#0B0C10] border-gray-800 focus:border-blue-500"
                   />
                 </div>
                 <div className="space-y-2">
@@ -131,13 +131,13 @@ const Auth = () => {
                     placeholder="••••••••"
                     value={password}
                     onChange={(e) => setPassword(e.target.value)}
-                    className="bg-secondary border-white/10"
+                    className="bg-[#0B0C10] border-gray-800 focus:border-blue-500"
                   />
                 </div>
                 <Button
                   onClick={() => handleEmailAuth("signup")}
                   disabled={isLoading}
-                  className="w-full bg-blue-600 hover:bg-blue-700"
+                  className="w-full button-gradient"
                 >
                   {isLoading ? "Creating account..." : "Create Account"}
                 </Button>
