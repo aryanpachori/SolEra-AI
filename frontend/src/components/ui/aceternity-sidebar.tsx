@@ -103,7 +103,7 @@ export const DesktopSidebar = ({
         {...props}
       >
         <motion.div
-          className="absolute inset-0 bg-gradient-to-br from-blue-500/5 to-purple-500/5 opacity-0"
+          className="absolute inset-0 bg-gradient-to-br from-primary/5 to-accent/5 opacity-0"
           animate={{
             opacity: open ? 1 : 0,
           }}
@@ -165,7 +165,7 @@ export const MobileSidebar = ({
               )}
             >
               <motion.div
-                className="absolute inset-0 bg-gradient-to-br from-blue-500/10 to-purple-500/10"
+                className="absolute inset-0 bg-gradient-to-br from-primary/10 to-accent/10"
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 transition={{ duration: 0.3, delay: 0.1 }}
@@ -226,13 +226,13 @@ export const SidebarLink = ({
       {...props}
     >
       <motion.div
-        className="absolute inset-0 bg-gradient-to-r from-blue-500/20 to-purple-500/20 opacity-0"
+        className="absolute inset-0 bg-gradient-to-r from-primary/20 to-accent/20 opacity-0"
         whileHover={{ opacity: 1 }}
         transition={{ duration: 0.3 }}
       />
       
       <motion.div
-        className="relative z-10"
+        className="relative z-10 flex items-center justify-center w-6 h-6"
         whileHover={{ scale: 1.1 }}
         transition={{ duration: 0.2 }}
       >

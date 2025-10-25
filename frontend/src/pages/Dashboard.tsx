@@ -17,9 +17,9 @@ const Dashboard = () => {
   ];
 
   const assetAllocation = [
-    { name: "SOL", value: 45, color: "#3b82f6" },
-    { name: "USDC", value: 30, color: "#60a5fa" },
-    { name: "Other", value: 25, color: "#93c5fd" },
+    { name: "SOL", value: 45, color: "#2563EB" },
+    { name: "USDC", value: 30, color: "#3B82F6" },
+    { name: "Other", value: 25, color: "#06B6D4" },
   ];
 
   const holdings = [
@@ -40,7 +40,7 @@ const Dashboard = () => {
                 transition={{ duration: 0.5, delay: 0.4 }}
                 whileHover={{ y: -5, scale: 1.02 }}
               >
-                <Card className="glass border-white/10 hover:border-blue-500/30 transition-all duration-300">
+                <Card className="bg-surface border border-border hover:border-primary/30 transition-all duration-300 rounded-xl">
                   <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
                     <CardTitle className="text-sm font-medium">Total Balance</CardTitle>
                     <motion.div
@@ -70,7 +70,7 @@ const Dashboard = () => {
                 transition={{ duration: 0.5, delay: 0.5 }}
                 whileHover={{ y: -5, scale: 1.02 }}
               >
-                <Card className="glass border-white/10 hover:border-green-500/30 transition-all duration-300">
+                <Card className="bg-surface border border-border hover:border-success/30 transition-all duration-300 rounded-xl">
                   <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
                     <CardTitle className="text-sm font-medium">24h Change</CardTitle>
                     <motion.div
@@ -100,7 +100,7 @@ const Dashboard = () => {
                 transition={{ duration: 0.5, delay: 0.6 }}
                 whileHover={{ y: -5, scale: 1.02 }}
               >
-                <Card className="glass border-white/10 hover:border-purple-500/30 transition-all duration-300">
+                <Card className="bg-surface border border-border hover:border-accent/30 transition-all duration-300 rounded-xl">
                   <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
                     <CardTitle className="text-sm font-medium">Total Assets</CardTitle>
                     <motion.div
@@ -151,25 +151,25 @@ const Dashboard = () => {
                     >
                       <ResponsiveContainer width="100%" height={300}>
                         <AreaChart data={portfolioData}>
-                          <defs>
-                            <linearGradient id="colorValue" x1="0" y1="0" x2="0" y2="1">
-                              <stop offset="5%" stopColor="#3b82f6" stopOpacity={0.3}/>
-                              <stop offset="95%" stopColor="#3b82f6" stopOpacity={0}/>
-                            </linearGradient>
-                          </defs>
-                          <CartesianGrid strokeDasharray="3 3" stroke="#ffffff10" />
-                          <XAxis dataKey="date" stroke="#888" />
-                          <YAxis stroke="#888" />
-                          <Tooltip 
-                            contentStyle={{ backgroundColor: '#1a1a1a', border: '1px solid #333' }}
-                          />
-                          <Area 
-                            type="monotone" 
-                            dataKey="value" 
-                            stroke="#3b82f6" 
-                            fillOpacity={1} 
-                            fill="url(#colorValue)" 
-                          />
+                      <defs>
+                        <linearGradient id="colorValue" x1="0" y1="0" x2="0" y2="1">
+                          <stop offset="5%" stopColor="#2563EB" stopOpacity={0.3}/>
+                          <stop offset="95%" stopColor="#06B6D4" stopOpacity={0}/>
+                        </linearGradient>
+                      </defs>
+                      <CartesianGrid strokeDasharray="3 3" stroke="#1F2937" />
+                      <XAxis dataKey="date" stroke="#9CA3AF" />
+                      <YAxis stroke="#9CA3AF" />
+                      <Tooltip 
+                        contentStyle={{ backgroundColor: '#0B0C10', border: '1px solid #1F2937', borderRadius: '8px' }}
+                      />
+                      <Area 
+                        type="monotone" 
+                        dataKey="value" 
+                        stroke="#2563EB" 
+                        fillOpacity={1} 
+                        fill="url(#colorValue)" 
+                      />
                         </AreaChart>
                       </ResponsiveContainer>
                     </motion.div>
@@ -183,7 +183,7 @@ const Dashboard = () => {
                 transition={{ duration: 0.6, delay: 0.8 }}
                 whileHover={{ y: -5 }}
               >
-                <Card className="glass border-white/10 hover:border-purple-500/30 transition-all duration-300">
+                <Card className="bg-surface border border-border hover:border-accent/30 transition-all duration-300 rounded-xl">
                   <CardHeader>
                     <motion.div
                       initial={{ opacity: 0, y: -10 }}
@@ -215,7 +215,7 @@ const Dashboard = () => {
                             ))}
                           </Pie>
                           <Tooltip 
-                            contentStyle={{ backgroundColor: '#1a1a1a', border: '1px solid #333' }}
+                            contentStyle={{ backgroundColor: '#0B0C10', border: '1px solid #1F2937', borderRadius: '8px' }}
                           />
                           <Legend />
                         </PieChart>
@@ -247,27 +247,27 @@ const Dashboard = () => {
                   <div className="overflow-x-auto">
                     <table className="w-full">
                       <thead>
-                        <tr className="border-b border-white/10">
-                          <th className="text-left py-3 px-4 text-sm font-medium text-gray-400">Token</th>
-                          <th className="text-right py-3 px-4 text-sm font-medium text-gray-400">Balance</th>
-                          <th className="text-right py-3 px-4 text-sm font-medium text-gray-400">Value</th>
-                          <th className="text-right py-3 px-4 text-sm font-medium text-gray-400">24h Change</th>
+                        <tr className="border-b border-border">
+                          <th className="text-left py-3 px-4 text-sm font-medium text-text-secondary">Token</th>
+                          <th className="text-right py-3 px-4 text-sm font-medium text-text-secondary">Balance</th>
+                          <th className="text-right py-3 px-4 text-sm font-medium text-text-secondary">Value</th>
+                          <th className="text-right py-3 px-4 text-sm font-medium text-text-secondary">24h Change</th>
                         </tr>
                       </thead>
                       <tbody>
                         {holdings.map((holding, index) => (
                           <motion.tr 
                             key={holding.token} 
-                            className="border-b border-white/5 hover:bg-white/5 transition-colors"
+                            className="border-b border-border/50 hover:bg-white/5 transition-colors"
                             initial={{ opacity: 0, x: -20 }}
                             animate={{ opacity: 1, x: 0 }}
                             transition={{ duration: 0.3, delay: 1.2 + (index * 0.1) }}
                             whileHover={{ x: 5, backgroundColor: "rgba(255, 255, 255, 0.05)" }}
                           >
-                            <td className="py-4 px-4 font-medium">{holding.token}</td>
-                            <td className="py-4 px-4 text-right text-gray-300">{holding.balance}</td>
-                            <td className="py-4 px-4 text-right font-medium">{holding.value}</td>
-                            <td className={`py-4 px-4 text-right font-medium ${holding.change.startsWith('+') ? 'text-green-500' : 'text-red-500'}`}>
+                            <td className="py-4 px-4 font-medium text-text-primary">{holding.token}</td>
+                            <td className="py-4 px-4 text-right text-text-secondary">{holding.balance}</td>
+                            <td className="py-4 px-4 text-right font-medium text-text-primary">{holding.value}</td>
+                            <td className={`py-4 px-4 text-right font-medium ${holding.change.startsWith('+') ? 'text-success' : 'text-error'}`}>
                               {holding.change}
                             </td>
                           </motion.tr>

@@ -83,7 +83,7 @@ const News = () => {
                 {newsItems
                   .filter(item => item.trending)
                   .map((item) => (
-                    <Card key={item.id} className="glass border-white/10 hover:bg-white/5 transition-all cursor-pointer group">
+                    <Card key={item.id} className="bg-surface border border-border hover:bg-white/5 transition-all cursor-pointer group rounded-xl">
                       <CardHeader>
                         <div className="flex items-start justify-between gap-4">
                           <div className="flex-1">
@@ -119,7 +119,7 @@ const News = () => {
                 {newsItems
                   .filter(item => !item.trending)
                   .map((item) => (
-                    <Card key={item.id} className="glass border-white/10 hover:bg-white/5 transition-all cursor-pointer group">
+                    <Card key={item.id} className="bg-surface border border-border hover:bg-white/5 transition-all cursor-pointer group rounded-xl">
                       <CardContent className="p-6">
                         <div className="flex gap-4">
                           <div className="flex-1">

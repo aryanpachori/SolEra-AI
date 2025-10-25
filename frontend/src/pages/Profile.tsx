@@ -35,7 +35,7 @@ const Profile = () => {
     <DashboardLayout title="Profile & Settings">
       <div className="max-w-4xl mx-auto space-y-6">
             {/* Profile Info */}
-            <Card className="glass border-white/10">
+            <Card className="bg-surface border border-border rounded-xl">
               <CardHeader>
                 <CardTitle>Profile Information</CardTitle>
               </CardHeader>
@@ -59,7 +59,7 @@ const Profile = () => {
                     <Input
                       id="name"
                       defaultValue="John Doe"
-                      className="bg-secondary border-white/10"
+                      className="bg-black border-border text-text-primary placeholder:text-text-secondary focus:ring-2 focus:ring-primary focus:border-transparent"
                     />
                   </div>
                   <div className="space-y-2">
@@ -68,7 +68,7 @@ const Profile = () => {
                       id="email"
                       type="email"
                       defaultValue="john@example.com"
-                      className="bg-secondary border-white/10"
+                      className="bg-black border-border text-text-primary placeholder:text-text-secondary focus:ring-2 focus:ring-primary focus:border-transparent"
                     />
                   </div>
                 </div>
@@ -76,7 +76,7 @@ const Profile = () => {
             </Card>
 
             {/* Connected Wallet */}
-            <Card className="glass border-white/10">
+            <Card className="bg-surface border border-border rounded-xl">
               <CardHeader>
                 <CardTitle>Connected Wallet</CardTitle>
               </CardHeader>
@@ -97,7 +97,7 @@ const Profile = () => {
             </Card>
 
             {/* Notifications */}
-            <Card className="glass border-white/10">
+            <Card className="bg-surface border border-border rounded-xl">
               <CardHeader>
                 <CardTitle>Notifications</CardTitle>
               </CardHeader>
@@ -126,7 +126,7 @@ const Profile = () => {
             </Card>
 
             {/* Preferences */}
-            <Card className="glass border-white/10">
+            <Card className="bg-surface border border-border rounded-xl">
               <CardHeader>
                 <CardTitle>Preferences</CardTitle>
               </CardHeader>
@@ -135,7 +135,7 @@ const Profile = () => {
                   <Label htmlFor="currency">Default Currency</Label>
                   <select
                     id="currency"
-                    className="w-full p-2 bg-secondary border border-white/10 rounded-md"
+                    className="w-full p-2 bg-black border border-border text-text-primary rounded-md focus:ring-2 focus:ring-primary focus:border-transparent"
                   >
                     <option>USD ($)</option>
                     <option>EUR (€)</option>
@@ -147,13 +147,13 @@ const Profile = () => {
 
             {/* Actions */}
             <div className="flex gap-4">
-              <Button onClick={handleSave} className="button-gradient">
+              <Button onClick={handleSave} className="bg-primary hover:bg-primary-hover text-white shadow-glow">
                 Save Changes
               </Button>
               <Button
                 onClick={handleLogout}
                 variant="outline"
-                className="border-red-500/50 text-red-500 hover:bg-red-500/10"
+                className="border-error/50 text-error hover:bg-error/10"
               >
                 <LogOut className="w-4 h-4 mr-2" />
                 Logout

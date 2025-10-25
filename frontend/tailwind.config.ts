@@ -19,57 +19,48 @@ export default {
     },
     extend: {
       fontFamily: {
-        sans: ['Inter', 'sans-serif'],
-        heading: ['Space Grotesk', 'sans-serif'],
-        body: ['Inter', 'sans-serif'],
+        sans: ["var(--font-inter)", "system-ui", "sans-serif"],
+        display: ["var(--font-space-grotesk)", "system-ui", "sans-serif"],
       },
       colors: {
-        border: "hsl(var(--border))",
-        input: "hsl(var(--input))",
-        ring: "hsl(var(--ring))",
-        background: {
-          DEFAULT: "hsl(var(--background))",
-          card: "#0B0B0F",
+        background: "#000000",
+        surface: "#0B0C10",
+        primary: { 
+          DEFAULT: "#2563EB", 
+          hover: "#3B82F6" 
         },
-        foreground: "hsl(var(--foreground))",
-        primary: {
-          DEFAULT: "#2563EB",
-          light: "#3B82F6",
-          dark: "#1E40AF",
-          foreground: "hsl(var(--primary-foreground))",
+        accent: "#06B6D4",
+        text: { 
+          primary: "#FFFFFF", 
+          secondary: "#9CA3AF" 
         },
-        secondary: {
-          DEFAULT: "#A855F7",
-          light: "#C084FC",
-          foreground: "hsl(var(--secondary-foreground))",
-        },
-        destructive: {
-          DEFAULT: "hsl(var(--destructive))",
-          foreground: "hsl(var(--destructive-foreground))",
-        },
-        muted: {
-          DEFAULT: "hsl(var(--muted))",
-          foreground: "hsl(var(--muted-foreground))",
-        },
-        accent: {
-          DEFAULT: "hsl(var(--accent))",
-          foreground: "hsl(var(--accent-foreground))",
-        },
-        popover: {
-          DEFAULT: "hsl(var(--popover))",
-          foreground: "hsl(var(--popover-foreground))",
-        },
-        card: {
-          DEFAULT: "hsl(var(--card))",
-          foreground: "hsl(var(--card-foreground))",
-        },
-        text: {
-          primary: "#FFFFFF",
-          muted: "#9CA3AF",
-        },
+        border: "#1F2937",
         success: "#10B981",
         error: "#EF4444",
         warning: "#F59E0B",
+        // Legacy shadcn colors for compatibility
+        foreground: "#FFFFFF",
+        muted: {
+          DEFAULT: "#1F2937",
+          foreground: "#9CA3AF",
+        },
+        card: {
+          DEFAULT: "#0B0C10",
+          foreground: "#FFFFFF",
+        },
+        popover: {
+          DEFAULT: "#0B0C10",
+          foreground: "#FFFFFF",
+        },
+        destructive: {
+          DEFAULT: "#EF4444",
+          foreground: "#FFFFFF",
+        },
+        ring: "#2563EB",
+        input: "#1F2937",
+      },
+      boxShadow: {
+        glow: "0 0 15px rgba(37,99,235,0.5)",
       },
       keyframes: {
         marquee: {

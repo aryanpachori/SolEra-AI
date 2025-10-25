@@ -7,6 +7,9 @@
 
 @layer base {
   :root {
+    --font-space-grotesk: 'Space Grotesk', system-ui, sans-serif;
+    --font-inter: 'Inter', system-ui, sans-serif;
+    
     --background: 0 0% 0%;
     --foreground: 0 0% 100%;
     --card: 240 8% 4%;
@@ -15,22 +18,22 @@
     --popover-foreground: 0 0% 100%;
     --primary: 217 91% 60%;
     --primary-foreground: 0 0% 100%;
-    --secondary: 271 81% 56%;
+    --secondary: 217 91% 60%;
     --secondary-foreground: 0 0% 100%;
-    --muted: 0 0% 10%;
+    --muted: 0 0% 18%;
     --muted-foreground: 0 0% 60%;
-    --accent: 217 91% 60%;
+    --accent: 188 100% 50%;
     --accent-foreground: 0 0% 100%;
     --destructive: 0 84% 60%;
     --destructive-foreground: 0 0% 100%;
-    --border: 0 0% 15%;
-    --input: 0 0% 15%;
+    --border: 0 0% 18%;
+    --input: 0 0% 18%;
     --ring: 217 91% 60%;
     --radius: 0.75rem;
     --chart-1: 217 91% 60%;
-    --chart-2: 221 83% 53%;
+    --chart-2: 188 100% 50%;
     --chart-3: 217 91% 60%;
-    --chart-4: 217 91% 60%;
+    --chart-4: 188 100% 50%;
     --chart-5: 217 91% 60%;
   }
 }
@@ -40,8 +43,12 @@
     @apply border-border;
   }
   body {
-    @apply bg-background text-foreground font-sans antialiased;
+    @apply bg-background text-text-primary font-sans antialiased;
     font-feature-settings: "rlig" 1, "calt" 1;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-display;
   }
 }
 
@@ -71,11 +78,11 @@
 }
 
 .text-gradient {
-  @apply bg-clip-text text-transparent bg-gradient-to-r from-blue-500 via-blue-400 to-blue-300;
+  @apply bg-clip-text text-transparent bg-gradient-to-r from-primary to-accent;
 }
 
 .button-gradient {
-  @apply bg-gradient-to-r from-blue-600 to-blue-500 hover:from-blue-500 hover:to-blue-400 transition-all duration-300 rounded-full;
+  @apply bg-gradient-to-r from-primary to-primary-hover hover:from-primary-hover hover:to-accent transition-all duration-300 rounded-full shadow-glow;
 }
 
 .hero-gradient {

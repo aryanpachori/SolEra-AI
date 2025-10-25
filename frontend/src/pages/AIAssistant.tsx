@@ -132,7 +132,7 @@ const AIAssistant = () => {
             )}
 
             {/* Input Area */}
-            <Card className="glass border-white/10">
+            <Card className="bg-surface border border-border rounded-xl">
               <CardContent className="p-4">
                 <div className="flex gap-2">
                   <Textarea
