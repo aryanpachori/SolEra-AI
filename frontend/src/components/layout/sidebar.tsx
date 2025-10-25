@@ -52,7 +52,7 @@ export function Sidebar({ className }: SidebarProps) {
   return (
     <motion.div
       className={cn(
-        "w-64 shrink-0 bg-surface border-r border-border sticky top-0 h-[100dvh] relative overflow-hidden",
+        "fixed left-0 top-0 z-50 bg-surface border-r border-border h-[100dvh] overflow-hidden",
         className
       )}
       animate={{
@@ -79,7 +79,10 @@ export function Sidebar({ className }: SidebarProps) {
       
       <div className="relative z-10 flex flex-col h-full">
         {/* Logo */}
-        <div className="p-4 border-b border-border">
+        <div className={cn(
+          "border-b border-border transition-all duration-300",
+          open ? "p-4" : "p-2"
+        )}>
           <motion.div
             className="flex items-center gap-3"
             initial={{ opacity: 0, x: -10 }}
@@ -106,7 +109,10 @@ export function Sidebar({ className }: SidebarProps) {
         </div>
 
         {/* Navigation */}
-        <nav className="flex-1 p-4 space-y-2">
+        <nav className={cn(
+          "flex-1 space-y-2 transition-all duration-300",
+          open ? "p-4" : "p-2"
+        )}>
           <div className="space-y-1">
             {navigationItems.map((item) => {
               const isActive = location.pathname === item.href;
@@ -137,7 +143,10 @@ export function Sidebar({ className }: SidebarProps) {
                     
                     {/* Icon */}
                     <motion.div
-                      className="relative z-10 shrink-0 flex items-center justify-center w-6 h-6"
+                      className={cn(
+                        "relative z-10 shrink-0 flex items-center justify-center transition-all duration-300",
+                        open ? "w-6 h-6" : "w-5 h-5"
+                      )}
                       whileHover={{ scale: 1.1 }}
                       transition={{ duration: 0.2 }}
                     >

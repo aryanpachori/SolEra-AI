@@ -88,11 +88,12 @@ export const DesktopSidebar = ({
     <>
       <motion.div
         className={cn(
-          "h-full px-4 py-4 hidden md:flex md:flex-col bg-black/20 border-r border-white/10 w-[300px] shrink-0 relative overflow-hidden",
+          "h-full py-4 hidden md:flex md:flex-col bg-black/20 border-r border-white/10 w-[300px] shrink-0 relative overflow-hidden transition-all duration-300",
+          open ? "px-4" : "px-2",
           className
         )}
         animate={{
-          width: animate ? (open ? "300px" : "60px") : "300px",
+          width: animate ? (open ? "300px" : "80px") : "300px",
         }}
         transition={{
           duration: 0.3,
@@ -232,7 +233,10 @@ export const SidebarLink = ({
       />
       
       <motion.div
-        className="relative z-10 flex items-center justify-center w-6 h-6"
+        className={cn(
+          "relative z-10 flex items-center justify-center transition-all duration-300",
+          open ? "w-6 h-6" : "w-5 h-5"
+        )}
         whileHover={{ scale: 1.1 }}
         transition={{ duration: 0.2 }}
       >
