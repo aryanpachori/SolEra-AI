@@ -1,5 +1,6 @@
 import { Sidebar } from "./sidebar";
 import { Topbar } from "./topbar";
+import { useSidebar } from "@/contexts/SidebarContext";
 import { motion } from "motion/react";
 
 interface DashboardLayoutProps {
@@ -8,11 +9,22 @@ interface DashboardLayoutProps {
 }
 
 const DashboardLayout = ({ children, title }: DashboardLayoutProps) => {
+  const { isOpen } = useSidebar();
+  
   return (
-    <div className="min-h-screen flex w-full bg-background text-text-primary overflow-hidden">
+    <div className="min-h-screen w-full bg-background text-text-primary">
       <Sidebar />
       
-      <div className="flex-1 flex flex-col">
+      <motion.div 
+        className="flex flex-col min-h-screen"
+        animate={{
+          marginLeft: isOpen ? "256px" : "64px",
+        }}
+        transition={{
+          duration: 0.3,
+          ease: [0.4, 0.0, 0.2, 1],
+        }}
+      >
         <Topbar title={title} />
         
         <main className="flex-1 overflow-y-auto">
@@ -25,7 +37,7 @@ const DashboardLayout = ({ children, title }: DashboardLayoutProps) => {
             {children}
           </motion.div>
         </main>
-      </div>
+      </motion.div>
     </div>
   );
 };
