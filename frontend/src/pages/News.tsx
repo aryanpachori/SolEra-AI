@@ -1,19 +1,9 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { Sidebar, SidebarContent, SidebarGroup, SidebarGroupContent, SidebarGroupLabel, SidebarMenu, SidebarMenuButton, SidebarMenuItem, SidebarProvider, SidebarTrigger } from "@/components/ui/sidebar";
-import { LayoutDashboard, BarChart3, Sparkles, Newspaper, User, TrendingUp, Clock } from "lucide-react";
-import { Link, useLocation } from "react-router-dom";
+import { TrendingUp, Clock } from "lucide-react";
+import DashboardLayout from "@/components/layout/DashboardLayout";
 
 const News = () => {
-  const location = useLocation();
-
-  const menuItems = [
-    { title: "Portfolio", url: "/dashboard", icon: LayoutDashboard },
-    { title: "Analytics", url: "/analytics", icon: BarChart3 },
-    { title: "AI Assistant", url: "/ai", icon: Sparkles },
-    { title: "News", url: "/news", icon: Newspaper },
-    { title: "Profile", url: "/profile", icon: User },
-  ];
 
   const newsItems = [
     {
@@ -81,46 +71,8 @@ const News = () => {
   };
 
   return (
-    <SidebarProvider>
-      <div className="min-h-screen flex w-full bg-black text-white">
-        <Sidebar className="border-r border-white/10">
-          <SidebarContent>
-            <div className="p-6 border-b border-white/10">
-              <div className="flex items-center gap-2">
-                <Sparkles className="w-6 h-6 text-blue-500" />
-                <span className="text-xl font-bold">SolEra AI</span>
-              </div>
-            </div>
-            
-            <SidebarGroup>
-              <SidebarGroupLabel>Navigation</SidebarGroupLabel>
-              <SidebarGroupContent>
-                <SidebarMenu>
-                  {menuItems.map((item) => (
-                    <SidebarMenuItem key={item.title}>
-                      <SidebarMenuButton asChild isActive={location.pathname === item.url}>
-                        <Link to={item.url} className="flex items-center gap-2">
-                          <item.icon className="w-4 h-4" />
-                          <span>{item.title}</span>
-                        </Link>
-                      </SidebarMenuButton>
-                    </SidebarMenuItem>
-                  ))}
-                </SidebarMenu>
-              </SidebarGroupContent>
-            </SidebarGroup>
-          </SidebarContent>
-        </Sidebar>
-
-        <main className="flex-1 overflow-auto">
-          <header className="sticky top-0 z-10 border-b border-white/10 bg-black/50 backdrop-blur-lg p-4">
-            <div className="flex items-center gap-4">
-              <SidebarTrigger />
-              <h1 className="text-2xl font-bold">Solana Ecosystem News</h1>
-            </div>
-          </header>
-
-          <div className="p-6">
+    <DashboardLayout title="Solana Ecosystem News">
+      <div>
             {/* Trending Section */}
             <div className="mb-8">
               <div className="flex items-center gap-2 mb-4">
@@ -192,10 +144,8 @@ const News = () => {
                   ))}
               </div>
             </div>
-          </div>
-        </main>
       </div>
-    </SidebarProvider>
+    </DashboardLayout>
   );
 };
 

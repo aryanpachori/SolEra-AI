@@ -2,9 +2,8 @@ import { useState } from "react";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Textarea } from "@/components/ui/textarea";
-import { Sidebar, SidebarContent, SidebarGroup, SidebarGroupContent, SidebarGroupLabel, SidebarMenu, SidebarMenuButton, SidebarMenuItem, SidebarProvider, SidebarTrigger } from "@/components/ui/sidebar";
-import { LayoutDashboard, BarChart3, Sparkles, Newspaper, User, Send, Bot } from "lucide-react";
-import { Link, useLocation } from "react-router-dom";
+import { Send, Bot } from "lucide-react";
+import DashboardLayout from "@/components/layout/DashboardLayout";
 
 interface Message {
   role: "user" | "assistant";
@@ -12,7 +11,6 @@ interface Message {
 }
 
 const AIAssistant = () => {
-  const location = useLocation();
   const [messages, setMessages] = useState<Message[]>([
     {
       role: "assistant",
@@ -21,14 +19,6 @@ const AIAssistant = () => {
   ]);
   const [input, setInput] = useState("");
   const [isLoading, setIsLoading] = useState(false);
-
-  const menuItems = [
-    { title: "Portfolio", url: "/dashboard", icon: LayoutDashboard },
-    { title: "Analytics", url: "/analytics", icon: BarChart3 },
-    { title: "AI Assistant", url: "/ai", icon: Sparkles },
-    { title: "News", url: "/news", icon: Newspaper },
-    { title: "Profile", url: "/profile", icon: User },
-  ];
 
   const handleSend = async () => {
     if (!input.trim()) return;
@@ -75,49 +65,8 @@ const AIAssistant = () => {
   ];
 
   return (
-    <SidebarProvider>
-      <div className="min-h-screen flex w-full bg-black text-white">
-        <Sidebar className="border-r border-white/10">
-          <SidebarContent>
-            <div className="p-6 border-b border-white/10">
-              <div className="flex items-center gap-2">
-                <Sparkles className="w-6 h-6 text-blue-500" />
-                <span className="text-xl font-bold">SolEra AI</span>
-              </div>
-            </div>
-            
-            <SidebarGroup>
-              <SidebarGroupLabel>Navigation</SidebarGroupLabel>
-              <SidebarGroupContent>
-                <SidebarMenu>
-                  {menuItems.map((item) => (
-                    <SidebarMenuItem key={item.title}>
-                      <SidebarMenuButton asChild isActive={location.pathname === item.url}>
-                        <Link to={item.url} className="flex items-center gap-2">
-                          <item.icon className="w-4 h-4" />
-                          <span>{item.title}</span>
-                        </Link>
-                      </SidebarMenuButton>
-                    </SidebarMenuItem>
-                  ))}
-                </SidebarMenu>
-              </SidebarGroupContent>
-            </SidebarGroup>
-          </SidebarContent>
-        </Sidebar>
-
-        <main className="flex-1 overflow-auto flex flex-col">
-          <header className="sticky top-0 z-10 border-b border-white/10 bg-black/50 backdrop-blur-lg p-4">
-            <div className="flex items-center gap-4">
-              <SidebarTrigger />
-              <div className="flex items-center gap-2">
-                <Sparkles className="w-6 h-6 text-blue-500" />
-                <h1 className="text-2xl font-bold">AI Assistant</h1>
-              </div>
-            </div>
-          </header>
-
-          <div className="flex-1 p-6 flex flex-col max-w-4xl mx-auto w-full">
+    <DashboardLayout title="AI Assistant">
+      <div className="flex-1 flex flex-col max-w-4xl mx-auto w-full">
             {/* Chat Messages */}
             <div className="flex-1 space-y-4 mb-6 overflow-y-auto">
               {messages.map((message, index) => (
@@ -208,10 +157,8 @@ const AIAssistant = () => {
                 </div>
               </CardContent>
             </Card>
-          </div>
-        </main>
       </div>
-    </SidebarProvider>
+    </DashboardLayout>
   );
 };
 
