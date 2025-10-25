@@ -11,7 +11,6 @@ import Analytics from "./pages/Analytics";
 import AIAssistant from "./pages/AIAssistant";
 import News from "./pages/News";
 import Profile from "./pages/Profile";
-import SidebarTest from "./pages/SidebarTest";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -32,7 +31,6 @@ const App = () => (
             <Route path="/ai" element={<AIAssistant />} />
             <Route path="/news" element={<News />} />
             <Route path="/profile" element={<Profile />} />
-            <Route path="/sidebar-test" element={<SidebarTest />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
         </BrowserRouter>
