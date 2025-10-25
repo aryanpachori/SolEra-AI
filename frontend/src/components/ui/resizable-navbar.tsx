@@ -244,8 +244,12 @@ export const NavbarLogo = () => {
       href="/"
       className="relative z-20 mr-4 flex items-center space-x-2 px-2 py-1 text-sm font-normal text-white"
     >
-      <div className="w-8 h-8 rounded-full bg-blue-500 flex items-center justify-center">
-        <span className="text-white font-bold text-lg">S</span>
+      <div className="w-8 h-8 rounded-full bg-blue-500 flex items-center justify-center overflow-hidden">
+        <img 
+          src="/solera.png" 
+          alt="SolEra AI" 
+          className="w-6 h-6 object-contain"
+        />
       </div>
       <span className="font-medium text-white">SolEra AI</span>
     </a>

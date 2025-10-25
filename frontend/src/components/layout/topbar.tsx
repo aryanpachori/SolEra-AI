@@ -13,7 +13,7 @@ export function Topbar({ title, className }: TopbarProps) {
   return (
     <motion.header
       className={cn(
-        "h-14 border-b border-border bg-black/60 backdrop-blur supports-[backdrop-filter]:bg-black/40 flex items-center justify-between px-6",
+        "h-16 border-b border-border bg-black/60 backdrop-blur supports-[backdrop-filter]:bg-black/40 flex items-center justify-between px-8",
         className
       )}
       initial={{ y: -50, opacity: 0 }}
@@ -31,7 +31,7 @@ export function Topbar({ title, className }: TopbarProps) {
       </motion.h1>
 
       {/* Right Side Actions */}
-      <div className="flex items-center gap-4">
+      <div className="flex items-center gap-6">
         {/* Search */}
         <motion.button
           className="p-2 rounded-lg hover:bg-white/5 transition-colors"

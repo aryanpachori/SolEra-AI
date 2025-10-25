@@ -35,7 +35,13 @@ const Auth = () => {
       
       <div className="w-full max-w-md relative z-10">
         <Link to="/" className="flex items-center justify-center gap-2 mb-8">
-          <Sparkles className="w-8 h-8 text-blue-500" />
+          <div className="w-8 h-8 flex items-center justify-center">
+            <img 
+              src="/solera.png" 
+              alt="SolEra AI" 
+              className="w-8 h-8 object-contain"
+            />
+          </div>
           <span className="text-2xl font-bold">SolEra AI</span>
         </Link>
 

@@ -18,7 +18,7 @@ const DashboardLayout = ({ children, title }: DashboardLayoutProps) => {
       <motion.div 
         className="flex flex-col min-h-screen"
         animate={{
-          marginLeft: isOpen ? "256px" : "64px",
+          marginLeft: isOpen ? "256px" : "80px",
         }}
         transition={{
           duration: 0.3,

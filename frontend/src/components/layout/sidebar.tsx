@@ -56,7 +56,7 @@ export function Sidebar({ className }: SidebarProps) {
         className
       )}
       animate={{
-        width: open ? "256px" : "64px",
+        width: open ? "256px" : "80px",
       }}
       transition={{
         duration: 0.3,
@@ -80,17 +80,24 @@ export function Sidebar({ className }: SidebarProps) {
       <div className="relative z-10 flex flex-col h-full">
         {/* Logo */}
         <div className={cn(
-          "border-b border-border transition-all duration-300",
-          open ? "p-4" : "p-2"
+          "border-b border-border transition-all duration-300 h-16 flex items-center",
+          open ? "p-6" : "p-3 justify-center"
         )}>
           <motion.div
-            className="flex items-center gap-3"
+            className={cn(
+              "flex items-center transition-all duration-300",
+              open ? "gap-3" : "justify-center"
+            )}
             initial={{ opacity: 0, x: -10 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.3 }}
           >
-            <div className="w-8 h-8 rounded-lg bg-primary flex items-center justify-center shrink-0">
-              <Sparkles className="w-5 h-5 text-white" />
+            <div className="w-8 h-8 flex items-center justify-center shrink-0">
+              <img 
+                src="/solera.png" 
+                alt="SolEra AI" 
+                className="w-8 h-8 object-contain"
+              />
             </div>
             <motion.span
               className="font-display font-semibold text-text-primary whitespace-nowrap"
@@ -110,10 +117,10 @@ export function Sidebar({ className }: SidebarProps) {
 
         {/* Navigation */}
         <nav className={cn(
-          "flex-1 space-y-2 transition-all duration-300",
-          open ? "p-4" : "p-2"
+          "flex-1 space-y-3 transition-all duration-300",
+          open ? "p-6" : "p-3"
         )}>
-          <div className="space-y-1">
+          <div className="space-y-2">
             {navigationItems.map((item) => {
               const isActive = location.pathname === item.href;
               const Icon = item.icon;
@@ -128,7 +135,7 @@ export function Sidebar({ className }: SidebarProps) {
                   <Link
                     to={item.href}
                     className={cn(
-                      "group flex items-center gap-3 rounded-lg px-3 py-2 text-text-secondary hover:text-text-primary hover:bg-white/5 transition-all duration-200 relative overflow-hidden",
+                      "group flex items-center gap-3 rounded-lg px-4 py-3 text-text-secondary hover:text-text-primary hover:bg-white/5 transition-all duration-200 relative overflow-hidden",
                       isActive && "bg-white/5 text-text-primary border border-border"
                     )}
                     role="link"
@@ -144,7 +151,7 @@ export function Sidebar({ className }: SidebarProps) {
                     {/* Icon */}
                     <motion.div
                       className={cn(
-                        "relative z-10 shrink-0 flex items-center justify-center transition-all duration-300",
+                        "relative z-10 shrink-0 flex items-center justify-center rounded-lg border border-border/50 bg-surface/50 transition-all duration-300",
                         open ? "w-6 h-6" : "w-5 h-5"
                       )}
                       whileHover={{ scale: 1.1 }}
@@ -175,9 +182,15 @@ export function Sidebar({ className }: SidebarProps) {
         </nav>
 
         {/* User Profile */}
-        <div className="p-4 border-t border-border">
+        <div className={cn(
+          "border-t border-border transition-all duration-300 mt-auto",
+          open ? "p-4" : "p-3 flex justify-center"
+        )}>
           <motion.div
-            className="flex items-center gap-3"
+            className={cn(
+              "flex items-center transition-all duration-300",
+              open ? "gap-3" : "justify-center"
+            )}
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.3, delay: 0.2 }}
